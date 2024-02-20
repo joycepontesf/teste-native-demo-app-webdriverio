@@ -14,6 +14,7 @@ describe('Funcionalidade de Form do webdriver.io', () => {
         const elemento = await $('android=new UiSelector().resourceId("android:id/message")')
         await elemento.waitForExist()
         const texto = await elemento.getText()
+        
         expect(texto).toEqual('This button is active', 'O texto do elemento não corresponde ao esperado.')
     })
 })
